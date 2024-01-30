@@ -20,6 +20,7 @@ function handleFormSubmit(event){
         localStorage.removeItem(my_obj.email)
         parent_element.removeChild(child_elem)
         parent_element.removeChild(delete_button)
+        parent_element.removeChild(edit_button)
 
     }
     parent_element.appendChild(delete_button)
