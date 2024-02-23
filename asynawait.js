@@ -1,34 +1,38 @@
-console.log('person1: shows ticket')
-console.log('person 2: shows ticket')
-// const promisebeingmade = new Promise((resolve,reject )=>{
-//     setTimeout(()=>{
-//         resolve('ticket')
-//     }, 10)
-// })
-// promisebeingmade.then((t)=>{
-//     console.log(`person:3 shows ${t}`)
-// })
-const premovie = async()=>{
-    const promisewifebringingtics=new  Promise((resolve,reject)=>{
-        setTimeout(()=> resolve('ticket'),3000)
+const p = new Promise((resolve,reject)=>{
+    setTimeout(()=>{
+        resolve('promise is being resolved')
 
-    })
-    const getpopcorn = new Promise((resolve,reject)=> resolve(`popcorn`))
-    const addbutter = new Promise((resolve,reject)=>resolve(`butter`))
-    const getcoke = new Promise((resolve,reject)=>resolve('coke'))
-    const getcandy = new Promise((resolve,reject)=>resolve('candy'))
-    let ticket = await promisewifebringingtics
-    
-    // console.log(`wife: i have the ${ticket} but iam hungry too`)
-    // let popcorn = await getpopcorn
-    // console.log(`husband: i got some ${popcorn}`)
-    // let butter = await addbutter
-    
-    // console.log(`husband: and here comes the ${butter}`)
-    let [popcorn,candy,coke] = await Promise.all([getpopcorn,getcandy,getcoke])
-    console.log(`${popcorn},${candy},${coke}`)
-    return ticket
+    },10000)  
+})
+const p1 = new Promise((resolve,reject)=>{
+    setTimeout(()=>{
+        resolve('p1 is executing')
+    },10000)
+})
+function traditionalmeth(){
+
+    console.log("namaste javascript 1")
+    p.then((res)=>console.log(res))
+    p1.then((res)=>console.log(res))
+
 }
-premovie().then((m)=>console.log(`person 3 has shown ${m}`))
-console.log('person :4 shows ticket')
-console.log('person: 5 shows ticket ')
+
+console.log('Namaste javscript')
+traditionalmeth()
+//  here we can seee that program is not wait
+//  now lets solve this using javascipt
+
+// async function anasyncfunc(){
+//     console.log('iam inside async 01')
+//     const val1 = await p1
+//     console.log(val1)
+//     console.log('im after await')
+//     console.log('iam after val')
+//     const val2 = await p
+//     console.log('await has been called')
+//     console.log(val2)
+//     console.log('val2 has been called')
+
+// }
+// anasyncfunc()
+

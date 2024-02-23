@@ -40,6 +40,7 @@ function handleFormSubmit(event){
     }
     parent_element.appendChild(edit_button)
     console.log(my_obj)
+    //done twice
 
 
 
